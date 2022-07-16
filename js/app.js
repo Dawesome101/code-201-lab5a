@@ -83,7 +83,6 @@ function sumArray(sumArr) { //eslint-disable-line
   return [sum1, str1];
 }
 
-
 // Here is the test for sumArray(); uncomment it to run it
 
 // testSumArray(testArray);
@@ -101,8 +100,6 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-
-//multiplyArray(testArray);
 
 function multiplyArray(multArr) { //eslint-disable-line
   let prod1 = multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0];
@@ -136,7 +133,9 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+  let prod = multiply(multiplyArray([dynamicArray[0], dynamicArray[1], dynamicArray[2]])[0], multiply(dynamicArray[3], dynamicArray[4])[0])[0];
+  let str = 'The numbers ' + dynamicArray[0] + ',' + dynamicArray[1] + ',' + dynamicArray[2] + ',' + dynamicArray[3] + ',' + dynamicArray[4] + ' have a product of ' + prod + '.';
+  return [prod, str];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
